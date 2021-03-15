@@ -1,0 +1,4 @@
+[Column("camel_case")]
+public decimal CamelCase { get; set; }
+[Column("snake_case")]
+public decimal SnakeCase { get; set; }
