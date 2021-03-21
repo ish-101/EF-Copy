@@ -16,11 +16,13 @@ if __name__ == '__main__':
 	db = DBCache()
 	attrs = db.get_table_attrs(table_name=table_name)
 
-	print(
+	table_class_name = expand_keyword(table_name)
+	ofile = open(f'./output/{table_class_name}.cs', 'w')
+	ofile.write(
 f'''\t[Table("{table_name}", Schema = "{db.get_schema_name()}")]
-\tpublic class {table_name}
-\t{{''')
-	for attr in attrs:
+\tpublic class {table_class_name}
+\t{{\n''')
+	for (i, attr) in enumerate(attrs):
 		name = expand_keyword(attr.COLUMN_NAME)
 		dtype = dtypes[attr.DATA_TYPE]
 		try:
@@ -36,10 +38,12 @@ f'''\t[Table("{table_name}", Schema = "{db.get_schema_name()}")]
 		else:
 			default = None
 		
-		print(f'\t\t[Column("{attr.COLUMN_NAME}")]')
+		ofile.write(f'\t\t[Column("{attr.COLUMN_NAME}")]\n')
 		if max_len is not None:
-		    print(f'\t\t[StringLength({max_len})]')
+		    ofile.write(f'\t\t[StringLength({max_len})]\n')
 		if attr.DATA_TYPE == 'timestamp':
-		    print('\t\t[Timestamp]')
-		print(f'\t\tpublic {dtype}{optional_operator} {name} {{ get; set; }}')
-	print('\t}')
+		    ofile.write('\t\t[Timestamp]\n')
+		ofile.write(f'\t\tpublic {dtype}{optional_operator} {name} {{ get; set; }}\n')
+		if i < len(attrs)-1:
+			ofile.write('\n')
+	ofile.write('\t}\n')

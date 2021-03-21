@@ -1,2 +1,0 @@
-camel_case
-snake_case
