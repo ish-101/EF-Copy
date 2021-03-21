@@ -2,20 +2,23 @@
 
 Writes EF Core entity column definitions for a given list of column names.
 
+## Configuration
+
+In the project root folder, create a ```.env``` file with the following fields:
+```
+DB_SERVER=
+DB_UID=
+DB_PWD=
+DB_TABLE_CATALOG=
+DB_TABLE_SCHEMA=
+```
+
+(Optional) Add ```keywords``` or  change ```CASE``` (upper/lower/title) in keywords.py.
+
 ## Usage
 
-```$ python entity.py in_file out_file```
+1) Load definitions:
+```$ python db.py table_name```
 
-The ```in_file``` should be located in ```./input/``` and the ```out_file``` should be located in ```./output/```.
-
-### Example
-
-```$ python entity.py example.txt example.txt```
-
-## Customization
-
-Add keywords to keywords.py.
-
-Change ```DTYPE``` (data type) in entity.py.
-
-Change ```CASE``` (upper/lower/title) in entity.py.
+2) Generate entities:
+```$ python entity.py table_name```
