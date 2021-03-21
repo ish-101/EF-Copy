@@ -1,8 +1,13 @@
 CASE = lambda word: word.title()
 
 keywords = {
-    # Values in ALL CAPS  are copied exactly
+    # Upper case / Case Blacklisted
     'id': 'ID',
+    'dl': 'DL',
+    'ss': 'SS',
+    'oa65': 'OA65',
+    'hs': 'HS',
+    'tsRowVersion': 'RowVersion',
     # Rest get converted to Titlecase
     'val': 'value',
     'num': 'number',
@@ -13,7 +18,16 @@ keywords = {
     'pct': 'percent',
     'prop': 'property',
     'prev': 'previous',
+    'exmpt': 'exempt',
+    'nm': 'name',
+    'sup': 'supply',
+    'sp': 'special',
+    'amt': 'amount'
 }
+
+case_blacklist = [
+    'RowVersion'
+]
 
 
 def expand_keyword(key):
@@ -22,7 +36,7 @@ def expand_keyword(key):
 	for word in words:
 		if word in keywords:
 			word = keywords[word]
-		if not word.isupper():
+		if not ((word.isupper()) or (word in case_blacklist)):
 			word = CASE(word)
 		value += word
 	return value
