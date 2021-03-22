@@ -1,6 +1,6 @@
 # EF-Copy
 
-Writes EF Core entity column definitions for a given list of column names.
+Copies EF Core Entity and DbContext  definitions from an existing SQL table.
 
 ## Configuration
 
@@ -17,8 +17,11 @@ DB_TABLE_SCHEMA=
 
 ## Usage
 
-1) Load definitions:
+1) Load Definition:
 ```$ python db.py table_name```
 
-2) Generate entities:
+2) Generate Entity:
 ```$ python entity.py table_name```
+
+3) Generate contexts:
+```$ python context.py table_name```

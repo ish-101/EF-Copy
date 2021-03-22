@@ -29,6 +29,12 @@ case_blacklist = [
     'RowVersion'
 ]
 
+def abbr_keyword(key):
+    value = ''
+    words = key.split('_')
+    for word in words:
+        value += word[0]
+    return value
 
 def expand_keyword(key):
 	value = ''
