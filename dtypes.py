@@ -10,3 +10,9 @@ dtypes = {
     'smalldatetime': 'DateTime',
     'timestamp': 'byte[]'
 }
+
+context_dtypes = [
+    'timestamp',
+    'bit',
+    'char'
+]
