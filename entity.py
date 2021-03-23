@@ -18,7 +18,7 @@ def entity(table_name, dto=False):
 		class_public = 'public '
 	ofile = open(f'./output/{table_class_name}{dto_postfix}.cs', 'w')
 	if not dto:
-		ofile.write(f'\t[Table("{table_name}", Schema = "{db.get_schema_name()}")]')
+		ofile.write(f'\t[Table("{table_name}", Schema = "{db.get_schema_name()}")]\n')
 	ofile.write(f'\tpublic class {table_class_name}{dto_postfix}\n\t{{\n')
 	for (i, attr) in enumerate(attrs):
 		name = expand_keyword(attr.COLUMN_NAME)
