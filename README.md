@@ -1,6 +1,6 @@
 # EF-Copy
 
-Copies EF Core Entity and DbContext  definitions from an existing SQL table.
+Copies EF Core Entity, DTO, and DbContext definitions from an existing SQL table.
 
 ## Configuration
 
