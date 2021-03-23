@@ -22,7 +22,8 @@ keywords = {
     'nm': 'name',
     'sup': 'supplement',
     'sp': 'special',
-    'amt': 'amount'
+    'amt': 'amount',
+    'desc': 'description'
 }
 
 case_blacklist = [
