@@ -29,7 +29,8 @@ keywords = {
     'auth': 'author',
     'appl': 'application',
     'eff': 'effective',
-    'exp': 'expiration'
+    'exp': 'expiration',
+    'assoc': 'association'
 }
 
 case_blacklist = [

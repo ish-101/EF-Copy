@@ -37,6 +37,8 @@ def entity(table_name, dto=False):
 			default = None
 		if dto and (attr.DATA_TYPE == 'timestamp'):
 			continue
+		if (not dto) and (not math.isnan(attr.PK_POSITION)):
+			ofile.write(f'\t\t[Key]\n')
 		if not dto:
 			ofile.write(f'\t\t[Column("{attr.COLUMN_NAME}")]\n')
 		if max_len is not None:
