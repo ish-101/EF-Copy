@@ -23,5 +23,8 @@ DB_TABLE_SCHEMA=
 2) Generate Entity:
 ```$ python entity.py table_name```
 
-3) Generate DbContext:
+3) Generate Dto:
+```$ python dto.py table_name```
+
+4) Generate DbContext:
 ```$ python context.py table_name```
