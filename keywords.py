@@ -20,7 +20,7 @@ keywords = {
     'prev': 'previous',
     'exmpt': 'exempt',
     'nm': 'name',
-    'sup': 'supply',
+    'sup': 'supplement',
     'sp': 'special',
     'amt': 'amount'
 }
