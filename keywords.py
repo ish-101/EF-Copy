@@ -26,11 +26,12 @@ keywords = {
     'desc': 'description',
     'tm': 'time',
     'cmnt': 'comment',
-    'auth': 'author',
+    'auth': 'authority',
     'appl': 'application',
     'eff': 'effective',
     'exp': 'expiration',
-    'assoc': 'association'
+    'assoc': 'association',
+    'ent': 'entity'
 }
 
 case_blacklist = [
