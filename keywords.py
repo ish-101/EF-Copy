@@ -23,7 +23,13 @@ keywords = {
     'sup': 'supplement',
     'sp': 'special',
     'amt': 'amount',
-    'desc': 'description'
+    'desc': 'description',
+    'tm': 'time',
+    'cmnt': 'comment',
+    'auth': 'author',
+    'appl': 'application',
+    'eff': 'effective',
+    'exp': 'expiration'
 }
 
 case_blacklist = [
