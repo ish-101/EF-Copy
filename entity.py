@@ -47,8 +47,6 @@ def entity(table_name, dto=False):
 			ofile.write('\t\t[Timestamp]\n')
 		ofile.write(
 			f'\t\tpublic {dtype}{optional_operator} {name} {{ get; set; }}\n')
-		if i < len(attrs)-1:
-			ofile.write('\n')
 	ofile.write('\t}\n')
 
 
