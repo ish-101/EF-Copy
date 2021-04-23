@@ -8,7 +8,8 @@ dtypes = {
     'bit': 'bool',
     'datetime': 'DateTime',
     'smalldatetime': 'DateTime',
-    'timestamp': 'byte[]'
+    'timestamp': 'byte[]',
+    'binary': 'byte[]'
 }
 
 context_dtypes = [
