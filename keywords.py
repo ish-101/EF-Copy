@@ -31,7 +31,9 @@ keywords = {
     'eff': 'effective',
     'exp': 'expiration',
     'assoc': 'association',
-    'ent': 'entity'
+    'ent': 'entity',
+    'chg': 'change',
+    'sys': 'system',
 }
 
 case_blacklist = [
